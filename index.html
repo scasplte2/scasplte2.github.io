@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>James Aman, Ph.D. · Protocol Engineer & Researcher</title>
+  <meta name="description" content="James Aman, Ph.D., a protocol engineer and researcher working on secure distributed systems, consensus, and blockchain. Currently a Protocol Engineer at Constellation Network." />
+  <meta name="author" content="James Aman" />
+  <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0e1014" media="(prefers-color-scheme: dark)" />
+  <link rel="canonical" href="https://jim.aman.ws/" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jim.aman.ws/" />
+  <meta property="og:title" content="James Aman, Ph.D. · Protocol Engineer & Researcher" />
+  <meta property="og:description" content="Protocol engineer, researcher, and educator working on secure distributed systems, consensus, and blockchain." />
+  <meta property="og:image" content="https://jim.aman.ws/assets/headshot.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@scasplte2" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Avoid theme flash before CSS/JS -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =============================================================== NAV -->
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="James Aman, home">
+        <span class="mark" aria-hidden="true">JA</span>
+        <span>James Aman</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="#research">Research</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle theme">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- ============================================================ HERO -->
+    <section class="hero" aria-labelledby="hero-name">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Ph.D. · Protocol Engineer · Educator</p>
+          <h1 id="hero-name">James Aman</h1>
+          <p class="tagline">Building secure, trust-minimized distributed systems.</p>
+          <p class="lead">
+            I'm a protocol engineer and researcher with a background in experimental
+            physics. For most of the last decade I've worked on blockchain technology:
+            designing consensus protocols, building the cryptography they rely on, and
+            shipping the applications that run on top. I spent four years teaching it, too.
+          </p>
+
+          <p class="place">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Minneapolis–St. Paul, MN
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+              Get in touch
+            </a>
+            <a class="btn btn-ghost" href="#work">View selected work</a>
+          </div>
+
+          <div class="socials" aria-label="Profiles">
+            <a href="https://github.com/scasplte2" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.26 5.69.42.36.8 1.08.8 2.18v3.23c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/dr-james-aman/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a href="https://x.com/scasplte2" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.66l7.73-8.84L1.24 2.25h6.82l4.71 6.23 5.47-6.23zm-1.16 17.52h1.83L7.01 4.13H5.04l12.04 15.64z"/></svg>
+            </a>
+            <a class="js-email" data-e="amFtZXMuYW1hbi5waGQrbGFuZGluZ0BnbWFpbC5jb20=" href="#" aria-label="Email" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <figure class="portrait">
+          <img src="assets/headshot.jpg" width="640" height="800" alt="Portrait of James Aman" fetchpriority="high" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- =========================================================== ABOUT -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2 class="section-title" id="about-title">How a physicist ended up building blockchains.</h2>
+        </div>
+        <div>
+          <div class="about-prose reveal">
+            <p>
+              I've been working in web3 since 2015, when I first started digging into how
+              blockchains actually work. Since then I've built decentralized applications on
+              a range of networks and helped design protocols, including a regularized
+              Nakamoto proof-of-stake consensus.
+            </p>
+            <p>
+              These days I'm a Protocol Engineer at <strong>Constellation Network</strong>,
+              where I help build a platform meant for sensitive, high-security environments.
+              Before that I co-founded <strong>Topl</strong>, a layer-one blockchain protocol
+              aimed at supporting sustainable and inclusive communities, and led its
+              engineering and research teams. For several years I also taught an introductory
+              blockchain course at <strong>Rice University</strong>.
+            </p>
+            <p>
+              Before any of that, I was a physicist. I earned my Ph.D. in 2019 studying
+              ultracold atomic gases, with thesis work on exotic halo molecules made by
+              laser-cooling strontium. The habits from the lab, careful measurement and a
+              tolerance for hard problems, turned out to translate well to protocol work.
+            </p>
+          </div>
+          <dl class="facts reveal">
+            <div class="fact"><dt>Now</dt><dd>Protocol Engineer, Constellation Network</dd></div>
+            <div class="fact"><dt>Focus</dt><dd>Consensus, cryptography &amp; distributed systems</dd></div>
+            <div class="fact"><dt>Tooling</dt><dd>Scala, functional programming, Rust</dd></div>
+            <div class="fact"><dt>Education</dt><dd>Ph.D., Atomic, Molecular &amp; Optical Physics, Rice University</dd></div>
+            <div class="fact"><dt>Based in</dt><dd>Minneapolis–St. Paul, MN</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== EXPERIENCE -->
+    <section id="experience" aria-labelledby="exp-title">
+      <div class="wrap">
+        <p class="eyebrow">Experience</p>
+        <h2 class="section-title" id="exp-title">A decade across research, startups &amp; the classroom.</h2>
+        <div class="timeline" style="margin-top: 2.5rem;">
+
+          <div class="tl-item is-now reveal">
+            <div class="tl-top">
+              <span class="tl-org">Constellation Network</span>
+              <span class="badge-now">Now</span>
+              <span class="tl-date">Aug 2023 – Present</span>
+            </div>
+            <div class="tl-role">Protocol Engineer</div>
+            <p class="tl-desc">
+              Contributor to the Tessellation platform and a layer-2 application developer on
+              the Constellation Metagraph framework. Development lead for federal projects.
+            </p>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-top">
+              <span class="tl-org">Rice University</span>
+              <span class="tl-date">Jan 2020 – Jan 2024</span>
+            </div>
+            <div class="tl-role">Lecturing Professor</div>
+            <p class="tl-desc">
+              Created and taught an introductory blockchain course for undergraduate and
+              graduate students, covering cryptographic primitives, classic blockchain
+              architecture, decentralized finance, and the latest developments in the field.
+            </p>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-top">
+              <span class="tl-org">Topl, Inc.</span>
+              <span class="tl-date">Mar 2017 – Mar 2023</span>
+            </div>
+            <div class="tl-role">Co-founder &amp; Chief Technology Officer</div>
+            <p class="tl-desc">
+              Led research and engineering for the Topl blockchain protocol, including the
+              regularized proof-of-stake algorithm <em>Ouroboros Taktikos</em>, its VRF and
+              KES cryptographic primitives, node infrastructure, SDKs, and client services.
+            </p>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-top">
+              <span class="tl-org">Corporate Partners in Education</span>
+              <span class="tl-date">Aug 2014 – Feb 2017</span>
+            </div>
+            <div class="tl-role">Chief Technology Officer</div>
+            <p class="tl-desc">
+              Built the core technology platform for a continuous fundraising mechanism that
+              connected K-12 schools with corporate sponsors, and engaged investors to raise
+              capital and facilitate partnerships.
+            </p>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-top">
+              <span class="tl-org">Rice University</span>
+              <span class="tl-date">Aug 2012 – Aug 2019</span>
+            </div>
+            <div class="tl-role">Ph.D. Researcher, Atomic, Molecular &amp; Optical Physics</div>
+            <p class="tl-desc">
+              Studied quantum-degenerate and ultracold neutral strontium, using optical fields
+              to couple colliding atoms into novel halo molecular states. This was the first
+              observation of naturally occurring long-range states in strontium.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ WORK -->
+    <section id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <p class="eyebrow">Selected Work</p>
+        <h2 class="section-title" id="work-title">Open-source &amp; protocol projects.</h2>
+        <p class="section-intro">A few projects I build or actively maintain, plus the platform I work on at Constellation. Mostly Scala, with some Python and a bit of my old physics code.</p>
+
+        <div class="cards" style="margin-top: 2.5rem;">
+
+          <a class="card reveal" href="https://github.com/scasplte2/ottochain" target="_blank" rel="noopener">
+            <div class="card-head">
+              <span class="card-name">ottochain</span>
+              <span class="tag">Scala</span>
+            </div>
+            <p class="card-kicker">Personal · Active</p>
+            <p class="card-desc">A from-scratch distributed-ledger client in Scala. My main sandbox for working through consensus and networking ideas end to end.</p>
+            <div class="card-foot"><span class="card-meta">★ 4</span><span class="card-link">View repo →</span></div>
+          </a>
+
+          <a class="card reveal" href="https://github.com/scasplte2/dilf4s" target="_blank" rel="noopener">
+            <div class="card-head">
+              <span class="card-name">dilf4s</span>
+              <span class="tag">Scala</span>
+            </div>
+            <p class="card-kicker">Personal · Active</p>
+            <p class="card-desc">A toolkit of reusable distributed-ledger functionalities in Scala: cryptographic and protocol building blocks I reach for across projects.</p>
+            <div class="card-foot"><span class="card-meta"></span><span class="card-link">View repo →</span></div>
+          </a>
+
+          <a class="card reveal" href="https://github.com/scasplte2/powc-watcher" target="_blank" rel="noopener">
+            <div class="card-head">
+              <span class="card-name">powc-watcher</span>
+              <span class="tag">Tooling</span>
+            </div>
+            <p class="card-kicker">Personal · Active</p>
+            <p class="card-desc">Proof-of-Work-Content. Notarizes file changes by immutably embedding author attribution, so edits carry a verifiable provenance trail.</p>
+            <div class="card-foot"><span class="card-meta"></span><span class="card-link">View repo →</span></div>
+          </a>
+
+          <a class="card reveal" href="https://github.com/Constellation-Labs/tessellation" target="_blank" rel="noopener">
+            <div class="card-head">
+              <span class="card-name">Tessellation</span>
+              <span class="tag">Scala</span>
+            </div>
+            <p class="card-kicker">Constellation Network · Contributor</p>
+            <p class="card-desc">The Constellation Network protocol platform, which I work on day to day. Provides the execution contexts that organize network topology.</p>
+            <div class="card-foot"><span class="card-meta"></span><span class="card-link">View repo →</span></div>
+          </a>
+
+          <a class="card reveal" href="https://github.com/scasplte2/pyDiatomic" target="_blank" rel="noopener">
+            <div class="card-head">
+              <span class="card-name">pyDiatomic</span>
+              <span class="tag">Python</span>
+            </div>
+            <p class="card-kicker">Research · Physics</p>
+            <p class="card-desc">A coupled-channel solver in Python, written during my atomic-physics research to model the molecular states at the heart of my thesis.</p>
+            <div class="card-foot"><span class="card-meta"></span><span class="card-link">View repo →</span></div>
+          </a>
+
+          <a class="card reveal" href="https://github.com/scasplte2/consensus_automata" target="_blank" rel="noopener">
+            <div class="card-head">
+              <span class="card-name">consensus_automata</span>
+              <span class="tag">Python</span>
+            </div>
+            <p class="card-kicker">Personal · Experiment</p>
+            <p class="card-desc">A smaller experiment poking at how distributed consensus behaves, modeled with simple automata.</p>
+            <div class="card-foot"><span class="card-meta"></span><span class="card-link">View repo →</span></div>
+          </a>
+
+        </div>
+
+        <div class="work-more">
+          <a class="btn btn-ghost" href="https://github.com/scasplte2" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.26 5.69.42.36.8 1.08.8 2.18v3.23c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+            See all repositories on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== RESEARCH -->
+    <section id="research" aria-labelledby="res-title">
+      <div class="wrap">
+        <p class="eyebrow">Research &amp; Publications</p>
+        <h2 class="section-title" id="res-title">Peer-reviewed work in physics &amp; consensus.</h2>
+
+        <div class="research-grid" style="margin-top: 2.5rem;">
+          <aside class="thesis-card reveal">
+            <h3>Ph.D. Dissertation</h3>
+            <p class="deg">Rice University · 2019 · Advisor: Dr. Thomas Killian</p>
+            <p class="thesis-title">Two-photon photoassociative spectroscopy of strontium-86</p>
+            <a class="thesis-read" href="https://repository.rice.edu/items/384a0cbf-5c76-4dc1-a732-e8a4d3c3e802" target="_blank" rel="noopener">Read on Rice's repository →</a>
+            <div class="degrees">
+              <div class="degree"><span class="yr">2019</span><span class="what">Ph.D., Atomic, Molecular &amp; Optical Physics, Rice University</span></div>
+              <div class="degree"><span class="yr">2016</span><span class="what">M.S., Atomic, Molecular &amp; Optical Physics, Rice University</span></div>
+              <div class="degree"><span class="yr">2011</span><span class="what">B.S., General Physics &amp; Chemical Physics, Rice University</span></div>
+            </div>
+          </aside>
+
+          <div>
+          <ol class="pubs reveal">
+            <li><span class="me">Schutza, A.M., Behrens, H.W., Duong, T., Aman, J.A.</span> <a class="pt" href="assets/Taktikos-Regularizing-PoS-BlockSys2023.pdf" target="_blank" rel="noopener">Ouroboros Taktikos: Regularizing Proof-of-Stake via Dynamic Difficulty.</a> <span class="venue">Blockchain and Trustworthy Systems (BlockSys 2023), CCIS vol. 1897, 2024. <span class="pdf-flag">PDF</span></span></li>
+            <li>S. Choudhury, K. R. Islam, Y. Hou, <span class="me">J. A. Aman</span>, T. C. Killian, K. R. Hazzard. <a class="pt" href="https://doi.org/10.1103/PhysRevA.101.053612" target="_blank" rel="noopener">Collective modes of ultracold fermionic alkaline-earth-metal gases with SU(N) symmetry.</a> <span class="venue">Phys. Rev. A 101, 053612 (2020).</span></li>
+            <li>W. Y. Kon, <span class="me">J. A. Aman</span>, J. C. Hill, T. C. Killian, K. R. A. Hazzard. <a class="pt" href="https://doi.org/10.1103/PhysRevA.100.013408" target="_blank" rel="noopener">High-intensity two-frequency photoassociation spectroscopy of a weakly bound molecular state: Theory and experiment.</a> <span class="venue">Phys. Rev. A 100, 013408 (2019).</span></li>
+            <li><span class="me">J. A. Aman</span>, J. C. Hill, R. Ding, W. Y. Kon, K. R. A. Hazzard, T. C. Killian. <a class="pt" href="https://doi.org/10.1103/PhysRevA.98.053441" target="_blank" rel="noopener">Photoassociative spectroscopy of a halo molecule in <sup>86</sup>Sr.</a> <span class="venue">Phys. Rev. A 98, 053441 (2018).</span></li>
+            <li>B. J. DeSalvo, <span class="me">J. A. Aman</span>, C. Gaul, T. Pohl, S. Yoshida, J. Burgdörfer, K. R. A. Hazzard, F. B. Dunning, T. C. Killian. <a class="pt" href="https://doi.org/10.1103/PhysRevA.93.022709" target="_blank" rel="noopener">Rydberg-blockade effects in Autler-Townes spectra of ultracold strontium.</a> <span class="venue">Phys. Rev. A 93, 022709 (2016).</span></li>
+            <li><span class="me">J. A. Aman</span>, B. J. DeSalvo, F. B. Dunning, T. C. Killian, S. Yoshida, J. Burgdörfer. <a class="pt" href="https://doi.org/10.1103/PhysRevA.93.043425" target="_blank" rel="noopener">Trap losses induced by near-resonant Rydberg dressing of cold atomic gases.</a> <span class="venue">Phys. Rev. A 93, 043425 (2016).</span></li>
+            <li>C. Gaul, B. J. DeSalvo, <span class="me">J. A. Aman</span>, F. B. Dunning, T. C. Killian, T. Pohl. <a class="pt" href="https://doi.org/10.1103/PhysRevLett.116.243001" target="_blank" rel="noopener">Resonant Rydberg dressing of alkaline-earth atoms via electromagnetically induced transparency.</a> <span class="venue">Phys. Rev. Lett. 116, 243001 (2016).</span></li>
+            <li>B. J. DeSalvo, <span class="me">J. A. Aman</span>, F. B. Dunning, T. C. Killian, H. R. Sadeghpour, S. Yoshida, J. Burgdörfer. <a class="pt" href="https://doi.org/10.1103/PhysRevA.92.031403" target="_blank" rel="noopener">Ultra-long-range Rydberg molecules in a divalent atomic system.</a> <span class="venue">Phys. Rev. A 92, 031403 (2015).</span></li>
+          </ol>
+          <p class="pubs-more"><a href="https://repository.rice.edu/collections/2d5ae93b-6822-4618-9977-6da99aa38e95/search?query=aman&amp;f.author=Aman,%20J.A.,equals" target="_blank" rel="noopener">Browse the physics record on Rice's research repository →</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== BEYOND -->
+    <section id="beyond" aria-labelledby="beyond-title">
+      <div class="wrap">
+        <p class="eyebrow">Beyond Work</p>
+        <h2 class="section-title" id="beyond-title">Off the keyboard.</h2>
+        <div class="beyond-grid" style="margin-top: 2.5rem;">
+
+          <div class="beyond-card reveal">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 17.5 9.5 8H5m9 9.5L9.5 8m4.5 9.5 3-7h2.5M9.5 8 8 5.5H6"/></svg>
+            </div>
+            <h3>Cycling</h3>
+            <p>I'm a serious cyclist. I race criteriums and spend a lot of weekends putting in long road miles.</p>
+          </div>
+
+          <div class="beyond-card reveal">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1A10 10 0 0 1 4.9 4.9"/><path d="M7.8 16.2a6 6 0 0 1 0-8.4"/><path d="M19.1 4.9a10 10 0 0 1 0 14.2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <h3>Amateur Radio</h3>
+            <p>I'm a licensed ham radio operator, call sign <strong>KD5UJC</strong>. I like that you can reach someone far away with nothing but a radio and an antenna. <a href="https://kd5ujc.xyz" target="_blank" rel="noopener">kd5ujc.xyz →</a></p>
+          </div>
+
+          <div class="beyond-card reveal">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14c4.5 0 8-1.8 8-4s-3.5-4-8-4-8 1.8-8 4 3.5 4 8 4z"/><path d="M4 10v4c0 2.2 3.5 4 8 4s8-1.8 8-4v-4"/><path d="M12 14v6"/></svg>
+            </div>
+            <h3>Teaching &amp; Mentoring</h3>
+            <p>I like explaining hard ideas in plain terms. I did it formally at Rice, and I still do it with engineers picking up distributed systems.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= CONTACT -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <p class="eyebrow" style="justify-content:center;">Contact</p>
+        <h2 class="section-title" id="contact-title">Let's talk.</h2>
+        <p class="section-intro">If you're working on consensus, cryptography, or secure distributed systems, or just want to compare notes, I'd be glad to hear from you.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary js-email" data-e="amFtZXMuYW1hbi5waGQrbGFuZGluZ0BnbWFpbC5jb20=" href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            <span class="js-email-text">Email me</span>
+          </a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/dr-james-aman/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================== FOOTER -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="who">James Aman, Ph.D.</div>
+        <div class="note">Protocol engineer · researcher · educator</div>
+      </div>
+      <div class="socials" aria-label="Profiles">
+        <a href="https://github.com/scasplte2" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.26 5.69.42.36.8 1.08.8 2.18v3.23c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/dr-james-aman/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0z"/></svg>
+        </a>
+        <a href="https://x.com/scasplte2" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.66l7.73-8.84L1.24 2.25h6.82l4.71 6.23 5.47-6.23zm-1.16 17.52h1.83L7.01 4.13H5.04l12.04 15.64z"/></svg>
+        </a>
+        <a class="js-email" data-e="amFtZXMuYW1hbi5waGQrbGFuZGluZ0BnbWFpbC5jb20=" href="#" aria-label="Email" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:1.4rem;">
+      <p class="note">© <span id="year">2026</span> James Aman. Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
